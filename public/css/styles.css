@@ -1,10 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
 :root {
-    --main-bg: 'F4F4F9';
-    --nav-bg: '586F7C';
-    --txt-clr: '000000';
-    
+    --main-bg: #F4F4F9;
+    --nav-bg: #2F4550;
+    --txt-clr: #000000;
+    --main-fnt: 'Cabin', sans-serif;
+    --nav-txt-clr: #B8DBD9;
+}
+/* top stylings */
+
+.top-bar {
+    background-color: var(--nav-bg);
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* main stylings */
+
+#name {
+    color: var(--txt-clr);
+    font-size: 100vh;
+    text-align: center;
+    text-wrap: nowrap;
+}
+main {
+    background-color: red;
 }
