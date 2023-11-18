@@ -23,6 +23,13 @@
     justify-content: flex-end;
 }
 
+#name-nav, #surname-nav {
+    font-size: 5rem;
+    box-sizing: border-box;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
 /* main stylings */
 
 #name {

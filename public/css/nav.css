@@ -21,8 +21,9 @@ main {
 }
 /* main navbar */
 #navbar {
-    width: 100%;
+
     position: sticky;
+    background-color: red;
 }
 
 .nav-list {
@@ -31,7 +32,7 @@ main {
     align-items: flex-end   ;
     justify-content: space-between;
     margin-left: auto;
-    width: 45%;
+    width: 60%;
 }   
 .nav-item {
     flex-grow: 0;
@@ -43,7 +44,6 @@ main {
 }
 
 .nav-item:last-child {
-    margin-right: 2rem;
 }
 .nav-link {
     text-decoration: none;
