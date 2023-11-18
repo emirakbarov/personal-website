@@ -18,9 +18,7 @@
     background-color: var(--nav-bg);
     width: 100vw;
     height: 35vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    position: relative;
 }
 
 #name-nav, #surname-nav {
