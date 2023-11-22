@@ -16,13 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const stickyName = document.querySelector(".name-nav-sticky");
   
     function handleScroll() {
-      if (window.scrollY >= navbarOffset) {
+      if (window.pageYOffset >= navbarOffset) {
+        console.log("sticky class added");
         navbar.classList.add("sticky");
         navItems.forEach((navItem) => {
             navItem.classList.add("sticky-hover");
         });
         stickyName.style.animation = "grow 0.2s 1 forwards";
       } else {
+        console.log("sticky class removed");
         navbar.classList.remove("sticky");
         navItems.forEach((navItem) => {
             navItem.classList.remove("sticky-hover");
