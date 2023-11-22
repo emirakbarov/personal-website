@@ -9,3 +9,27 @@ window.addEventListener('DOMContentLoaded', () => {
         navItem.style.animation = `navStart 0.2s ${index * 0.1}s 2 alternate`;
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.getElementById("navbar");
+    const navbarOffset = navbar.offsetTop;
+    const stickyName = document.querySelector(".name-nav-sticky");
+  
+    function handleScroll() {
+      if (window.scrollY >= navbarOffset) {
+        navbar.classList.add("sticky");
+        navItems.forEach((navItem) => {
+            navItem.classList.add("sticky-hover");
+        });
+        stickyName.style.animation = "grow 0.2s 1 forwards";
+      } else {
+        navbar.classList.remove("sticky");
+        navItems.forEach((navItem) => {
+            navItem.classList.remove("sticky-hover");
+        });
+        stickyName.style.animation = "shrink 0.2s 1 forwards";
+      }
+    }
+  
+    window.addEventListener("scroll", handleScroll);
+});

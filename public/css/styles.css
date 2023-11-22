@@ -1,6 +1,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
 
+/* anims */
+@keyframes jumpFromBottom {
+    0% {
+        top: 150%;
+    }
+    100% {
+        top: 15%;
+    }
+}
+@keyframes jumpFromLeft {
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -24,10 +37,19 @@
 }
 
 #name-nav, #surname-nav {
-    font-size: 5rem;
+    font-size: 7rem;
     box-sizing: border-box;
     flex-grow: 0;
     flex-shrink: 0;
+    position: absolute;
+    left: 2%;
+    font-family: var(--main-fnt);
+}
+#name-nav {
+    top: 1.5%;
+}
+#surname-nav {
+    top: 15%;
 }
 
 /* main stylings */
@@ -38,6 +60,11 @@
     text-align: center;
     text-wrap: nowrap;
 }
-main {
-    background-color: red;
+
+/* js classes */ 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }

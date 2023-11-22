@@ -15,21 +15,35 @@
         margin-bottom: 1.5rem;
     } 
 }
+@keyframes grow {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+@keyframes shrink {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 0;
+    }
+}
 
 main {
     margin-top: 7rem;
 }
 /* main navbar */
 #navbar {
-
-    position: sticky;
-    background-color: red;
+    background-color: var(--nav-bg);
 }
 
 .nav-list {
     display: flex;
     flex-direction: row;
-    align-items: flex-end   ;
+    align-items: flex-end;
     justify-content: space-between;
     margin-left: auto;
     width: 60%;
@@ -44,6 +58,7 @@ main {
 }
 
 .nav-item:last-child {
+    margin-right: 2rem;
 }
 .nav-link {
     text-decoration: none;
@@ -83,13 +98,21 @@ main {
     flex-shrink: 0;
 }
 
+/* navbar sticky name */
+
+.name-nav-sticky {
+    position: absolute;
+    left: 0;
+    margin-left: 1.5rem;
+    scale: 0;
+}
+
 /* hover effects */
 .links-btn:hover {
     padding-left: 1.5rem;
 }
-
-.nav-item:hover{
-    padding-bottom: 2rem;
+.sticky-hover:hover .nav-item {
+    padding-left: 10rem;
 }
 /* other */
 
