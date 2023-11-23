@@ -11,25 +11,32 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.getElementById("navbar");
-    const navbarOffset = navbar.offsetTop;
+    let navbar = document.getElementById("navbar");
+    let navbarOffset = 0;
+
+    do {
+        navbarOffset += navbar.offsetTop;
+        navbar = navbar.offsetParent;
+    } while (navbar);
+    
+    navbarOffset = navbarOffset < 0 ? 0 : navbarOffset;
     const stickyName = document.querySelector(".name-nav-sticky");
   
     function handleScroll() {
       if (window.pageYOffset >= navbarOffset) {
-        console.log("sticky class added");
         navbar.classList.add("sticky");
+        console.log("sticky class added");
+        stickyName.style.animation = "grow 0.2s 1 forwards";
         navItems.forEach((navItem) => {
             navItem.classList.add("sticky-hover");
         });
-        stickyName.style.animation = "grow 0.2s 1 forwards";
       } else {
         console.log("sticky class removed");
         navbar.classList.remove("sticky");
+        stickyName.style.animation = "shrink 0.2s 1 forwards";
         navItems.forEach((navItem) => {
             navItem.classList.remove("sticky-hover");
         });
-        stickyName.style.animation = "shrink 0.2s 1 forwards";
       }
     }
   

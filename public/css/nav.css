@@ -49,8 +49,10 @@ main {
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    position: relative;
+    position: absolute;
+    bottom: 0;
     right: 0;
+    width: 50%;
 }   
 .nav-item {
     flex-grow: 0;
@@ -111,8 +113,11 @@ main {
 .name-nav-sticky {
     position: absolute;
     left: 0;
+    margin-right: auto;
     margin-left: 1.5rem;
     scale: 1;
+    bottom: 0;
+    scale: 0;
 }
 
 /* hover effects */
@@ -133,4 +138,10 @@ main {
 }
 .github {
     fill:#171515;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
 }
