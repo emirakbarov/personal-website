@@ -11,12 +11,32 @@ let prevScrollPos = window.pageYOffset;
 
 window.onscroll = () => {
   const currentScrollPos = window.pageYOffset;
-
   if (prevScrollPos < currentScrollPos) {
     document.getElementById("navbar").style.animation = "navScrollUp 0.5s 1 forwards";
   } else {
-    document.getElementById("navbar").style.animation = "navScrollDown 0.5s 1 forwards"; /* Adjust the value based on your navbar height */
+    document.getElementById("navbar").style.animation = "navScrollDown 0.5s 1 forwards";
   }
-
   prevScrollPos = currentScrollPos;
 };
+document.addEventListener('DOMContentLoaded', () => {
+  const navbarLinks = document.querySelectorAll('#navbar li a');
+
+  navbarLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      
+      const targetId = link.getAttribute('href').substring(1);
+      let targetElement;
+      if(targetId == "name") {
+        targetElement = window;
+      }
+      else {
+        targetElement = document.getElementById(targetId);
+      }
+      window.scrollTo({
+        top: targetElement === window ? 0 : targetElement.offsetTop,
+        behavior: 'smooth'
+      });
+    });
+  });
+});

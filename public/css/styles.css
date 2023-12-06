@@ -40,6 +40,12 @@
 
 /* main stylings */
 
+.titles-txt {
+    color: var(--txt-clr);
+    font-family: var(--main-fnt);
+    font-size: 4rem;
+}
+
 .text-container {
     margin-left: 5.3rem;
     margin-right: 5.3rem;
@@ -68,4 +74,33 @@
     width: 100%;
 }
 
-/* js classes */ 
+/* about me stylings */
+
+#about-container > p {
+    font-family: var(--main-fnt);
+    color: var(--txt-clr);
+    font-size: 1.3rem;
+}
+
+/* skills stylings */
+#skills-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* scrollbar stylings */
+body::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--nav-bg);
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--nav-txt-clr);
+    border: 1.3px solid var(--txt-clr);
+    border-radius: 3px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--nav-txt-hvr-clr);
+}
