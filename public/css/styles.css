@@ -24,15 +24,9 @@
     --txt-clr: #000000;
     --main-fnt: 'Cabin', sans-serif;
     --nav-txt-clr: #B8DBD9;
+    --nav-txt-hvr-clr: #a7acac;
 }
 /* top stylings */
-
-.top-bar {
-    background-color: var(--nav-bg);
-    width: 100vw;
-    height: 35vh;
-    position: relative;
-}
 
 #name-nav, #surname-nav {
     font-size: 7rem;
@@ -43,20 +37,36 @@
     left: 2%;
     font-family: var(--main-fnt);
 }
-#name-nav {
-    top: 1.5%;
-}
-#surname-nav {
-    top: 15%;
-}
 
 /* main stylings */
 
+.text-container {
+    margin-left: 5.3rem;
+    margin-right: 5.3rem;
+}
+
 #name {
-    color: var(--txt-clr);
-    font-size: 100vh;
+    color: var(--nav-bg);
+    font-family: var(--main-fnt);
+    font-size: 12rem;
+    text-align: left;
+    display: inline-block;
+    padding-left: 2rem;
+}
+
+#me-photo {
+    display: inline;
+    border: 3px solid var(--txt-clr);
+}
+
+#name-img-container {
+    display: block;
+    overflow: 0;
     text-align: center;
-    text-wrap: nowrap;
+}
+
+#overall-name-container {
+    width: 100%;
 }
 
 /* js classes */ 
