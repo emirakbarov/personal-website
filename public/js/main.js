@@ -19,6 +19,11 @@ window.onscroll = () => {
   prevScrollPos = currentScrollPos;
 };
 document.addEventListener('DOMContentLoaded', () => {
+
+  const name = document.getElementById("name");
+
+  name.style.animation = "jumpFromRight 1s 1 forwards ease-out";
+
   const navbarLinks = document.querySelectorAll('#navbar li a');
 
   navbarLinks.forEach(link => {
@@ -38,5 +43,35 @@ document.addEventListener('DOMContentLoaded', () => {
         behavior: 'smooth'
       });
     });
+  });
+});
+const skills = document.querySelectorAll("#skills-container .fa-brands");
+
+skills.forEach((skill, index) => {
+  const currentHover = skill;
+  const leftHover = index > 0 ? skills[index - 1] : null;
+  const rightHover = index < skills.length - 1 ? skills[index + 1] : null;
+
+  skill.addEventListener("mouseover", () => {
+    console.log(skills.length);
+    if (index !== 0 && index !== skills.length - 1) {
+      currentHover.style.transform = "scale(1.7)";
+      if (leftHover) leftHover.style.transform = "scale(1.2)";
+      if (rightHover) rightHover.style.transform = "scale(1.2)";
+    } 
+    else if (index === 0) {
+      currentHover.style.transform = "scale(1.7)";
+      if (rightHover) rightHover.style.transform = "scale(1.2)";
+    } 
+    else if (index === skills.length - 1) {
+      currentHover.style.transform = "scale(1.7)";
+      if (leftHover) leftHover.style.transform = "scale(1.2)";
+    }
+  });
+
+  skill.addEventListener("mouseout", () => {
+    currentHover.style.transform = "scale(0.9)";
+    if (rightHover) rightHover.style.transform = "scale(0.9)";
+    if (leftHover) leftHover.style.transform = "scale(0.9)";
   });
 });

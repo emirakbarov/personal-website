@@ -2,16 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
 
 /* anims */
-@keyframes jumpFromBottom {
+@keyframes jumpFromRight {
     0% {
-        top: 150%;
+        translate: 100% 0;
+    }
+    30% {
+        translate: -5% 0;
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(0.5);
+    }
+    60% {
+        transform: scaleX(1);
+    }
+    70% {
+        translate: 15% 0;
     }
     100% {
-        top: 15%;
+        translate: 0 0;
     }
-}
-@keyframes jumpFromLeft {
-
 }
 
 * {
@@ -80,12 +90,18 @@
     font-family: var(--main-fnt);
     color: var(--txt-clr);
     font-size: 1.3rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
 }
 
 /* skills stylings */
+
 #skills-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 /* scrollbar stylings */

@@ -57,6 +57,8 @@ main {
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 10;
+    border-bottom: 3px solid var(--txt-clr);
 }
 
 .nav-list {

@@ -1,11 +1,7 @@
 
-#portfolio-txt {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-}
-
 #portfolio-container {
     display: flex;
+    margin-top: 2rem;
 }
 
 .portfolio-item {
@@ -56,8 +52,12 @@
     display: inline;
     flex-grow: 0;
     flex-shrink: 0;
-    padding-right: 1rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
     fill: var(--nav-bg);
+    color: var(--nav-bg);
+    max-width: 10em;
+    transform: scale(0.9);
+    transition: transform 0.2s;
 }
 
 /* hover effects */
