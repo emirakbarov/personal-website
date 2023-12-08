@@ -8,13 +8,17 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 let prevScrollPos = window.pageYOffset;
+let navOut = true;
+const nav = document.getElementById('navbar');
 
 window.onscroll = () => {
   const currentScrollPos = window.pageYOffset;
   if (prevScrollPos < currentScrollPos) {
-    document.getElementById("navbar").style.animation = "navScrollUp 0.5s 1 forwards";
+    nav.style.animation = "navScrollUp 0.5s 1 forwards";
+    navOut = false;
   } else {
-    document.getElementById("navbar").style.animation = "navScrollDown 0.5s 1 forwards";
+    nav.style.animation = "navScrollDown 0.5s 1 forwards";
+    navOut = true;
   }
   prevScrollPos = currentScrollPos;
 };
@@ -38,8 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
       else {
         targetElement = document.getElementById(targetId);
       }
+      console.log(navOut);
       window.scrollTo({
-        top: targetElement === window ? 0 : targetElement.offsetTop,
+        top: navOut === false ? (targetElement === window ? 0 : targetElement.offsetTop) : (targetElement === window ? 0 : targetElement.offsetTop - nav.offsetHeight),
         behavior: 'smooth'
       });
     });
@@ -75,3 +80,4 @@ skills.forEach((skill, index) => {
     if (leftHover) leftHover.style.transform = "scale(0.9)";
   });
 });
+

@@ -2,6 +2,7 @@
 #portfolio-container {
     display: flex;
     margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .portfolio-item {
@@ -13,7 +14,7 @@
     border: 3px solid var(--txt-clr);
     display: flex;
     flex-direction: column;
-    max-height: 32rem;
+    box-shadow: 10px 10px var(--nav-bg);
 }
 .portfolio-item:last-child {
     margin-right: 0;
@@ -48,16 +49,9 @@
     padding-bottom: 0.8rem;
     box-sizing: border-box;
 }
-.fa-brands {
-    display: inline;
-    flex-grow: 0;
-    flex-shrink: 0;
-    padding: 0 1.5rem 1.5rem 1.5rem;
-    fill: var(--nav-bg);
-    color: var(--nav-bg);
-    max-width: 10em;
-    transform: scale(0.9);
-    transition: transform 0.2s;
+
+.portfolio-icons {
+    padding-right: 1rem;
 }
 
 /* hover effects */
