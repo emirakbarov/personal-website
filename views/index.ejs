@@ -15,7 +15,7 @@
                 <a href="#portfolio-txt" class="nav-link"><span class="link-text">Portfolio</span></a>
             </li>
             <li class="nav-item">
-                <a href="#contact-page" class="nav-link"><span class="link-text">Contact</span></a>
+                <a href="#contact-txt" class="nav-link"><span class="link-text">Contact</span></a>
             </li>
             <li class="nav-item">
                 <a href="/" class="nav-link"><span class="link-text">Theme</span></a>
@@ -96,7 +96,6 @@
                     <div class="portfolio-skills"></div>
                 </div>
             </div>
-        
             <text id="contact-txt" class="titles-txt">Contact me!</text>
             <div id="contact-page">
                 <form id="user-message-form" method="POST" action="/">
@@ -112,17 +111,21 @@
         <footer class="footer">
             <div id="info-container">
                 <ul id="info-list">
-                    <li class="info-item"><span class="info-text">Home</span></li>
-                    <li class="info-item"><span class="info-text">Skills</span></li>
-                    <li class="info-item"><span class="info-text">Portfolio</span></li>
-                    <li class="info-item"><span class="info-text">Contact</span></li>
-                    <li class="info-item"><span class="info-text">Theme</span></li>
+                    <li class="info-item"><a href="#name" class="info-link"><span class="info-text">Home</span></a></li>
+                    <li class="info-item"><a href="#skills-txt" class="info-link"><span class="info-text">Skills</span></a></li>
+                    <li class="info-item"><a href="##portfolio-txt" class="info-link"><span class="info-text">Portfolio</span></a></li>
+                    <li class="info-item"><a href="#contact-txt" class="info-link"><span class="info-text">Contact</span></a></li>
+                    <li class="info-item"><a href="/" class="info-link"><span class="info-text">Theme</span></a></li>
                 </ul>
             </div>
-            <label for="pers-pas">If you're me, enter the password</label>
-            <input type="password" name="pers-pas" id="pers-pas">
-            <text id="footnote">Thanks for visiting this website. More projects coming soon!</text>
-            <text id="copyright-txt">&copy; 2023 Emir Akbarov</text>
+            <div id="footer-bottom-container">
+                <text id="footnote">Thanks for visiting this website. More projects coming soon!</text>
+                <text id="copyright-txt">&copy; 2023 Emir Akbarov</text>
+                <div id="footer-login-container">
+                    <label for="pers-pas">If you're me, enter the password</label>
+                    <input type="password" name="pers-pas" id="pers-pas">
+                </div>
+            </div>
         </footer>
     </main>
 </body>

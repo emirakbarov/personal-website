@@ -29,12 +29,22 @@ document.addEventListener('DOMContentLoaded', () => {
   name.style.animation = "jumpFromRight 1s 1 forwards ease-out";
 
   const navbarLinks = document.querySelectorAll('#navbar li a');
+  const infoLinks = document.querySelectorAll(".info-link");
 
   navbarLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      
-      const targetId = link.getAttribute('href').substring(1);
+      navigate(link);
+    });
+  });
+  infoLinks.forEach(item => {
+    item.addEventListener('click', e => {
+      e.preventDefault();
+      navigate(item);
+    });
+  });
+  function navigate(link) {
+    const targetId = link.getAttribute('href').substring(1);
       let targetElement;
       if(targetId == "name") {
         targetElement = window;
@@ -47,8 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         top: navOut === false ? (targetElement === window ? 0 : targetElement.offsetTop) : (targetElement === window ? 0 : targetElement.offsetTop - nav.offsetHeight),
         behavior: 'smooth'
       });
-    });
-  });
+  }
 });
 const skills = document.querySelectorAll("#skills-container .fa-brands");
 
